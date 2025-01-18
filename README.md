@@ -2,6 +2,16 @@
 
 A modern, full-stack blog application built with Next.js, Convex, and Clerk. Features dark mode support, real-time updates, and authentication.
 
+## Latest Version
+
+Current stable version: `1.0.3`
+
+### What's New
+- 🔄 Automatic package manager detection (npm, yarn, pnpm)
+- 📦 Automatic dependency installation
+- 🧹 Cleaner project structure
+- 🚀 Improved setup experience
+
 ## Features
 
 - 🔐 Authentication with Clerk
@@ -26,14 +36,21 @@ A modern, full-stack blog application built with Next.js, Convex, and Clerk. Fea
 ### Prerequisites
 
 - Node.js 18+ 
-- pnpm (strongly recommended)
+- A package manager:
   ```bash
+  # Using npm (comes with Node.js)
+  Already installed with Node.js
+
+  # Using yarn (optional)
+  npm install -g yarn
+
+  # Using pnpm (recommended)
   npm install -g pnpm
   ```
 - Convex account
 - Clerk account
 
-> **Note:** While npm and yarn will work, we strongly recommend using pnpm for this project as it provides better dependency management and disk space efficiency.
+> **Note:** While all package managers are supported, we recommend pnpm for better dependency management and disk space efficiency.
 
 ### Installation
 
@@ -41,15 +58,19 @@ You can start a new project in two ways:
 
 #### Method 1: Using Create Command (Recommended)
 ```bash
-# Interactive mode (recommended)
-pnpm create @vidaize/next-stack
-
-# Or with npm
-npx @vidaize/create-next-stack
-
-# You can also specify the project name directly
-pnpm create @vidaize/next-stack my-app
+# Using npm
 npx @vidaize/create-next-stack my-app
+
+# Using yarn
+yarn create @vidaize/next-stack my-app
+
+# Using pnpm
+pnpm create @vidaize/next-stack my-app
+
+# Or use interactive mode (recommended)
+npx @vidaize/create-next-stack
+yarn create @vidaize/next-stack
+pnpm create @vidaize/next-stack
 ```
 
 The create command will:
@@ -58,6 +79,7 @@ The create command will:
 3. Clone the template
 4. Initialize a new git repository
 5. Update the package.json with your project name
+6. **Automatically install dependencies using your preferred package manager**
 
 #### Method 2: Manual Installation
 
