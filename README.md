@@ -1,6 +1,20 @@
 # Next Stack
 
-A modern, full-stack blog application built with Next.js, Convex, and Clerk. Features dark mode support, real-time updates, and authentication.
+A modern, production-ready starter template for building full-stack applications with Next.js, Convex, and Clerk. Features real-time updates, authentication, dark mode, and best practices out of the box.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FVidAIze%2Fnext-stack-template)
+[![GitHub](https://img.shields.io/github/license/VidAIze/next-stack-template)](https://github.com/VidAIze/next-stack-template/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/VidAIze/next-stack-template)](https://github.com/VidAIze/next-stack-template/stargazers)
+
+## Overview
+
+Next Stack is designed to help you build production-ready applications faster. It combines the best tools in the React ecosystem:
+
+- 🏗️ **Next.js 14** - The React framework for production
+- 🔄 **Convex** - Real-time database with automatic sync
+- 🔐 **Clerk** - Authentication and user management
+- 🎨 **Tailwind CSS** - Utility-first CSS framework
+- 🌓 **next-themes** - Dark mode with system preference detection
 
 ## Latest Version
 
@@ -12,175 +26,119 @@ Current stable version: `1.0.3`
 - 🧹 Cleaner project structure
 - 🚀 Improved setup experience
 
-## Features
+## Key Features
 
-- 🔐 Authentication with Clerk
-- 📝 Real-time blog post creation and updates
-- 🌓 Dark mode support with next-themes
-- 🎨 Modern UI with Tailwind CSS
-- 🚀 Real-time database with Convex
-- 🔄 Optimistic updates
-- 📱 Fully responsive design
+### Authentication & Security
+- 🔒 Secure authentication with Clerk
+- 🛡️ Protected routes and API endpoints
 - 👤 User profiles and avatars
+- 🔑 Role-based access control
 
-## Tech Stack
+### Real-time Features
+- ⚡ Real-time data updates
+- 📝 Live blog post creation
+- 🔄 Optimistic updates
+- 🚀 Automatic cache management
 
-- [Next.js 14](https://nextjs.org/) - React framework
-- [Convex](https://convex.dev/) - Backend database and real-time sync
-- [Clerk](https://clerk.dev/) - Authentication and user management
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [next-themes](https://github.com/pacocoursey/next-themes) - Dark mode support
+### Developer Experience
+- 📱 Responsive design system
+- 🌓 Dark mode with system detection
+- 🎯 TypeScript support
+- 🧪 Best practices built-in
 
-## Getting Started
+### Performance
+- ⚡ Fast page loads
+- 🔄 Efficient real-time sync
+- 📦 Optimized bundle size
+- 🚀 Edge-ready
 
-### Prerequisites
+## Quick Start
 
-- Node.js 18+ 
-- A package manager:
-  ```bash
-  # Using npm (comes with Node.js)
-  Already installed with Node.js
-
-  # Using yarn (optional)
-  npm install -g yarn
-
-  # Using pnpm (recommended)
-  npm install -g pnpm
-  ```
-- Convex account
-- Clerk account
-
-> **Note:** While all package managers are supported, we recommend pnpm for better dependency management and disk space efficiency.
-
-### Installation
-
-You can start a new project in two ways:
-
-#### Method 1: Using Create Command (Recommended)
+### Using Create Command (Recommended)
 ```bash
-# Using npm
-npx @vidaize/create-next-stack my-app
-
-# Using yarn
-yarn create @vidaize/next-stack my-app
-
-# Using pnpm
-pnpm create @vidaize/next-stack my-app
-
-# Or use interactive mode (recommended)
+# Interactive mode with your preferred package manager
 npx @vidaize/create-next-stack
+# or
 yarn create @vidaize/next-stack
+# or
 pnpm create @vidaize/next-stack
+
+# Or specify project name directly
+pnpm create @vidaize/next-stack my-app
 ```
 
-The create command will:
-1. Ask for your project name (if not provided)
-2. Create a new directory for your project
-3. Clone the template
-4. Initialize a new git repository
-5. Update the package.json with your project name
-6. **Automatically install dependencies using your preferred package manager**
-
-#### Method 2: Manual Installation
-
-1. Clone the repository:
+### Manual Setup
 ```bash
+# Clone the repository
 git clone https://github.com/VidAIze/next-stack-template.git
-cd next-stack-template
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies with your preferred package manager
 pnpm install
-```
 
-3. Create a `.env.local` file in the root directory and add your environment variables:
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-```
+# Set up environment variables
+cp .env.example .env.local
 
-4. Initialize Convex:
-```bash
-pnpm dlx convex dev
-```
-
-5. Start the development server:
-```bash
+# Start the development server
 pnpm dev
 ```
 
-The application should now be running at [http://localhost:3000](http://localhost:3000).
+## Documentation
 
-## Project Structure
+### Environment Setup
+Required environment variables:
+\`\`\`env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
+CLERK_SECRET_KEY=your_clerk_secret
+NEXT_PUBLIC_CONVEX_URL=your_convex_url
+\`\`\`
 
+### Project Structure
 ```
 ├── app/                    # Next.js app directory
-│   ├── blog/              # Blog page
-│   ├── dashboard/         # Dashboard page
-│   ├── sign-in/          # Sign in page
-│   └── sign-up/          # Sign up page
+│   ├── blog/              # Blog features
+│   ├── dashboard/         # Admin dashboard
+│   └── auth/             # Authentication pages
 ├── components/            # React components
-│   ├── loading.tsx       # Loading states
-│   ├── theme-menu.tsx    # Theme switcher
-│   └── providers/        # Context providers
-├── convex/               # Convex backend
-│   ├── schema.ts        # Database schema
-│   ├── posts.ts         # Post-related functions
-│   └── users.ts         # User-related functions
-├── hooks/               # Custom React hooks
-└── lib/                # Utility functions
+├── convex/               # Backend & database
+├── lib/                 # Utility functions
+└── public/              # Static assets
 ```
 
-## Features in Detail
-
-### Authentication
-- Secure authentication with Clerk
-- Protected routes and API endpoints
-- User profile management
-
-### Blog System
-- Create and read blog posts
-- Real-time updates
-- Author information display
-- Formatted dates
-- Responsive layout
-
-### Theme System
-- System theme detection
-- Light and dark mode support
-- Persistent theme preference
-- Smooth theme transitions
+### Best Practices
+- 🔄 Use Convex queries for real-time data
+- 🛡️ Implement proper auth checks
+- 📱 Follow responsive design patterns
+- ⚡ Optimize for performance
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## Support
+
+- 📚 [Documentation](https://github.com/VidAIze/next-stack-template/wiki)
+- 🐛 [Issue Tracker](https://github.com/VidAIze/next-stack-template/issues)
+- 💬 [Discussions](https://github.com/VidAIze/next-stack-template/discussions)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Package Installation
+## Acknowledgments
 
-### Using as a Template (via Package)
+- [Next.js](https://nextjs.org/)
+- [Convex](https://convex.dev/)
+- [Clerk](https://clerk.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
 
-You can also use this project as a template by installing it as a package:
+---
 
-```bash
-# Using pnpm (recommended)
-pnpm add @vidaize/next-stack
+<div align="center">
 
-# Using npm
-npm install @vidaize/next-stack
-```
+**[Get Started](https://github.com/VidAIze/next-stack-template#quick-start)** · 
+**[Documentation](https://github.com/VidAIze/next-stack-template/wiki)** · 
+**[Report Bug](https://github.com/VidAIze/next-stack-template/issues)** · 
+**[Request Feature](https://github.com/VidAIze/next-stack-template/issues)**
 
-This will install the template as a dependency in your project. You can then:
-1. Copy the files from `node_modules/@vidaize/next-stack` to your project
-2. Modify the configuration files as needed
-3. Update dependencies in your `package.json`
-
-> **Note:** For most users, we recommend using the create command (Method 1 in Installation) as it provides a smoother setup experience.
+</div>
