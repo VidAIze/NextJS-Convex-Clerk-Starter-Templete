@@ -85,8 +85,8 @@ The create command will:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete.git
-cd NextJS-Convex-Clerk-Starter-Templete
+git clone https://github.com/VidAIze/next-stack-template.git
+cd next-stack-template
 ```
 
 2. Install dependencies:

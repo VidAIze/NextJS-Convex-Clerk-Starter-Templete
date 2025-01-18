@@ -76,7 +76,7 @@ async function init() {
 
   try {
     // Clone the repository
-    execSync(`git clone https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete.git ${projectPath}`, {
+    execSync(`git clone https://github.com/VidAIze/next-stack-template.git ${projectPath}`, {
       stdio: 'inherit',
     });
 
