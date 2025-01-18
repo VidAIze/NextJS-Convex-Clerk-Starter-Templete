@@ -26,9 +26,14 @@ A modern, full-stack blog application built with Next.js, Convex, and Clerk. Fea
 ### Prerequisites
 
 - Node.js 18+ 
-- pnpm (recommended) or npm
+- pnpm (strongly recommended)
+  ```bash
+  npm install -g pnpm
+  ```
 - Convex account
 - Clerk account
+
+> **Note:** While npm and yarn will work, we strongly recommend using pnpm for this project as it provides better dependency management and disk space efficiency.
 
 ### Installation
 
@@ -112,3 +117,17 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Package Installation
+
+You can also install this template as a package using npm or pnpm:
+
+```bash
+# Using pnpm (recommended)
+pnpm add @vidaize/nextjs-convex-clerk-starter
+
+# Using npm
+npm install @vidaize/nextjs-convex-clerk-starter
+```
+
+This will install the template as a dependency in your project, allowing you to use it as a starting point for your own applications.
