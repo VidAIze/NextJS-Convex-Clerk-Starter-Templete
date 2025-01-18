@@ -1,4 +1,4 @@
-# Next.js Blog Template with Convex and Clerk
+# Next Stack
 
 A modern, full-stack blog application built with Next.js, Convex, and Clerk. Features dark mode support, real-time updates, and authentication.
 
@@ -42,14 +42,14 @@ You can start a new project in two ways:
 #### Method 1: Using Create Command (Recommended)
 ```bash
 # Interactive mode (recommended)
-pnpm create @vidaize/nextjs-convex-clerk-starter
+pnpm create @vidaize/next-stack
 
 # Or with npm
-npx @vidaize/create-nextjs-convex-clerk-starter
+npx @vidaize/create-next-stack
 
 # You can also specify the project name directly
-pnpm create @vidaize/nextjs-convex-clerk-starter my-app
-npx @vidaize/create-nextjs-convex-clerk-starter my-app
+pnpm create @vidaize/next-stack my-app
+npx @vidaize/create-next-stack my-app
 ```
 
 The create command will:
@@ -150,14 +150,14 @@ You can also use this project as a template by installing it as a package:
 
 ```bash
 # Using pnpm (recommended)
-pnpm add @vidaize/nextjs-convex-clerk-starter
+pnpm add @vidaize/next-stack
 
 # Using npm
-npm install @vidaize/nextjs-convex-clerk-starter
+npm install @vidaize/next-stack
 ```
 
 This will install the template as a dependency in your project. You can then:
-1. Copy the files from `node_modules/@vidaize/nextjs-convex-clerk-starter` to your project
+1. Copy the files from `node_modules/@vidaize/next-stack` to your project
 2. Modify the configuration files as needed
 3. Update dependencies in your `package.json`
 

@@ -15,7 +15,7 @@ async function init() {
   let projectPath = '';
 
   program
-    .name('create-nextjs-convex-clerk-starter')
+    .name('create-next-stack')
     .description('Create a new Next.js project with Convex and Clerk')
     .argument('[project-directory]', 'The name of your project')
     .parse(process.argv);
@@ -36,7 +36,7 @@ async function init() {
 
   if (!projectPath) {
     console.log('Please specify the project directory:');
-    console.log('  create-nextjs-convex-clerk-starter', chalk.green('<project-directory>'));
+    console.log('  create-next-stack', chalk.green('<project-directory>'));
     process.exit(1);
   }
 

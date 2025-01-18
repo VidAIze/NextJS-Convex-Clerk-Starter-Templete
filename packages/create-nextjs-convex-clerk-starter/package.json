@@ -1,11 +1,11 @@
 {
-  "name": "@vidaize/create-nextjs-convex-clerk-starter",
+  "name": "@vidaize/create-next-stack",
   "version": "1.0.0",
   "description": "Create Next.js projects with Convex and Clerk setup",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "create-nextjs-convex-clerk-starter": "./index.js"
+    "create-next-stack": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,8 @@
     "convex",
     "clerk",
     "create",
-    "template"
+    "template",
+    "next-stack"
   ],
   "author": "VidAIze",
   "license": "MIT",
