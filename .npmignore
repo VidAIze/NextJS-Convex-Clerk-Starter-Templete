@@ -1,0 +1,48 @@
+# Development
+.git
+.github
+.vscode
+.idea
+*.log
+*.swp
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Build
+.next
+out
+dist
+build
+coverage
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+.nyc_output
+*.test.ts
+*.test.tsx
+__tests__
+test
+
+# Misc
+.gitignore
+.npmrc
+.prettierrc
+.eslintrc
+.eslintignore
+.editorconfig
+*.md
+!README.md
+!LICENSE
+
+# Development configs
+tsconfig.json
+postcss.config.js
+tailwind.config.js
+next.config.js 
