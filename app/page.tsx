@@ -86,14 +86,32 @@ export default function HomePage() {
                 <div className="rounded-xl bg-white/5 ring-1 ring-white/10 backdrop-blur">
                   <pre className="text-[0.8125rem] leading-6 text-gray-300 rounded-xl bg-gray-900 dark:bg-gray-800 p-4">
                     <code className="text-gray-300">
-{`# Clone the repository
+{`### Using Create Command (Recommended)
+
+# Interactive mode with your preferred package manager
+npx @vidaize/create-next-stack
+# or
+yarn create @vidaize/next-stack
+# or
+pnpm create @vidaize/next-stack
+
+# Or specify project name directly
+pnpm create @vidaize/next-stack my-app
+
+### Manual Setup
+
+# Clone the repository
 git clone https://github.com/VidAIze/next-stack-template.git
 
-# Install dependencies
+# Install dependencies with your preferred package manager
 pnpm install
 
+# Set up environment variables
+cp .env.example .env.local
+
 # Start the development server
-pnpm dev`}
+pnpm dev
+`}
                     </code>
                   </pre>
                 </div>
