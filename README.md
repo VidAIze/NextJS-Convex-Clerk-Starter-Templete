@@ -41,12 +41,23 @@ You can start a new project in two ways:
 
 #### Method 1: Using Create Command (Recommended)
 ```bash
-# Using pnpm
+# Interactive mode (recommended)
 pnpm create @vidaize/nextjs-convex-clerk-starter
 
-# Using npm
-npx create-@vidaize/nextjs-convex-clerk-starter
+# Or with npm
+npx @vidaize/create-nextjs-convex-clerk-starter
+
+# You can also specify the project name directly
+pnpm create @vidaize/nextjs-convex-clerk-starter my-app
+npx @vidaize/create-nextjs-convex-clerk-starter my-app
 ```
+
+The create command will:
+1. Ask for your project name (if not provided)
+2. Create a new directory for your project
+3. Clone the template
+4. Initialize a new git repository
+5. Update the package.json with your project name
 
 #### Method 2: Manual Installation
 
