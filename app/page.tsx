@@ -1,8 +1,7 @@
 "use client";
 
-import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { SignUpButton, UserButton } from "@clerk/nextjs";
 import { useAuth } from "@/hooks/use-auth";
-import { Loading } from "@/components/loading";
 import ThemeMenu from "@/components/theme-menu";
 import Link from "next/link";
 

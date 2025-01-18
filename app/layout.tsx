@@ -2,7 +2,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
 import { AuthProvider } from "@/components/providers/auth-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const metadata = {

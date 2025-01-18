@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export default function ThemeMenu() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme, themes } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
