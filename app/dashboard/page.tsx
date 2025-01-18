@@ -12,6 +12,7 @@ import { api } from "@/convex/_generated/api";
 
 export default function DashboardPage() {
   const { user, isLoaded: isUserLoaded } = useUser();
+  const { isAuthenticated } = useAuth();
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");

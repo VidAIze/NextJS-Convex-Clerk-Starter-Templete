@@ -6,7 +6,6 @@ import { useAuth } from "@/hooks/use-auth";
 import ThemeMenu from "@/components/theme-menu";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
-import Image from "next/image";
 
 export default function BlogPage() {
   const { isAuthenticated } = useAuth();
@@ -60,12 +59,10 @@ export default function BlogPage() {
                 <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
                   {post.author && (
                     <div className="flex items-center gap-2">
-                      <Image
+                      <img
                         src={post.author.imageUrl}
                         alt={post.author.name}
-                        width={24}
-                        height={24}
-                        className="rounded-full"
+                        className="w-6 h-6 rounded-full"
                       />
                       <span>{post.author.name}</span>
                     </div>
