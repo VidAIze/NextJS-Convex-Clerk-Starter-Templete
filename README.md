@@ -37,6 +37,19 @@ A modern, full-stack blog application built with Next.js, Convex, and Clerk. Fea
 
 ### Installation
 
+You can start a new project in two ways:
+
+#### Method 1: Using Create Command (Recommended)
+```bash
+# Using pnpm
+pnpm create @vidaize/nextjs-convex-clerk-starter
+
+# Using npm
+npx create-@vidaize/nextjs-convex-clerk-starter
+```
+
+#### Method 2: Manual Installation
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete.git
@@ -120,7 +133,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Package Installation
 
-You can also install this template as a package using npm or pnpm:
+### Using as a Template (via Package)
+
+You can also use this project as a template by installing it as a package:
 
 ```bash
 # Using pnpm (recommended)
@@ -130,4 +145,9 @@ pnpm add @vidaize/nextjs-convex-clerk-starter
 npm install @vidaize/nextjs-convex-clerk-starter
 ```
 
-This will install the template as a dependency in your project, allowing you to use it as a starting point for your own applications.
+This will install the template as a dependency in your project. You can then:
+1. Copy the files from `node_modules/@vidaize/nextjs-convex-clerk-starter` to your project
+2. Modify the configuration files as needed
+3. Update dependencies in your `package.json`
+
+> **Note:** For most users, we recommend using the create command (Method 1 in Installation) as it provides a smoother setup experience.
