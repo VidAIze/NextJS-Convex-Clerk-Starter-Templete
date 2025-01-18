@@ -12,7 +12,6 @@ import { api } from "@/convex/_generated/api";
 
 export default function DashboardPage() {
   const { user, isLoaded: isUserLoaded } = useUser();
-  const { isAuthenticated } = useAuth();
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -66,7 +65,7 @@ export default function DashboardPage() {
       <nav className="flex items-center justify-between p-4 bg-white dark:bg-gray-800">
         <div className="flex items-center gap-6">
           <Link href="/" className="text-xl font-bold text-gray-800 dark:text-white">
-            My App
+            Next Stack
           </Link>
           <Link
             href="/blog"

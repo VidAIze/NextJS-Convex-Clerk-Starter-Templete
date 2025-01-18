@@ -2,12 +2,11 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
 import { AuthProvider } from "@/components/providers/auth-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const metadata = {
-  title: "Next.js Template with Convex and Clerk",
-  description: "A starter template with Next.js, Convex, and Clerk integration",
+  title: "Next Stack - Next.js + Convex + Clerk Template",
+  description: "A modern full-stack starter template with authentication, real-time updates, and dark mode support.",
 };
 
 export default function RootLayout({
