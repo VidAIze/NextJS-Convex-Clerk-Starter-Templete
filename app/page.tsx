@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
             <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
               <div className="mt-24 sm:mt-32 lg:mt-16">
-                <a href="https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete" className="inline-flex space-x-6">
+                <a href="https://github.com/VidAIze/next-stack-template" className="inline-flex space-x-6">
                   <span className="rounded-full bg-gray-900/10 dark:bg-gray-100/10 px-3 py-1 text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 ring-1 ring-inset ring-gray-900/10 dark:ring-gray-100/10">
                     Latest release
                   </span>
@@ -76,7 +76,7 @@ export default function HomePage() {
                     </button>
                   </SignUpButton>
                 )}
-                <a href="https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete" className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
+                <a href="https://github.com/VidAIze/next-stack-template" className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
                   View on GitHub <span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -87,7 +87,7 @@ export default function HomePage() {
                   <pre className="text-[0.8125rem] leading-6 text-gray-300 rounded-xl bg-gray-900 dark:bg-gray-800 p-4">
                     <code className="text-gray-300">
 {`# Clone the repository
-git clone https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete.git
+git clone https://github.com/VidAIze/next-stack-template.git
 
 # Install dependencies
 pnpm install
