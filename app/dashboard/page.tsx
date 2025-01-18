@@ -1,7 +1,6 @@
 "use client";
 
 import { UserButton, useUser } from "@clerk/nextjs";
-import { useAuth } from "@/hooks/use-auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { TransitionContent } from "@/components/transition-content";
