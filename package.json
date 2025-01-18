@@ -1,7 +1,30 @@
 {
-  "name": "nextjs-convex-clerk-starter",
+  "name": "@vidaize/nextjs-convex-clerk-starter",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "description": "A modern full-stack starter template with Next.js, Convex, and Clerk",
+  "author": "Abdul D'Braun",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete/issues"
+  },
+  "homepage": "https://github.com/VidAIze/NextJS-Convex-Clerk-Starter-Templete#readme",
+  "keywords": [
+    "nextjs",
+    "convex",
+    "clerk",
+    "starter",
+    "template",
+    "typescript",
+    "tailwindcss",
+    "dark-mode",
+    "authentication",
+    "real-time"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
