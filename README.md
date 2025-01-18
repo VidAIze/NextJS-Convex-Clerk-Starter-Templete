@@ -4,6 +4,10 @@ A modern, production-ready starter template for building full-stack applications
 
 <div align="center">
 
+[![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Convex](https://img.shields.io/badge/Convex-dc2626?style=for-the-badge&logo=converkit&logoColor=white)](https://convex.dev)
+[![Clerk](https://img.shields.io/badge/Clerk-131415?style=for-the-badge&logo=clerk&logoColor=white)](https://clerk.com)
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FVidAIze%2Fnext-stack-template)
 [![GitHub](https://img.shields.io/github/license/VidAIze/next-stack-template)](https://github.com/VidAIze/next-stack-template/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/VidAIze/next-stack-template)](https://github.com/VidAIze/next-stack-template/stargazers)
@@ -16,7 +20,7 @@ A modern, production-ready starter template for building full-stack applications
 
 Next Stack is designed to help you build production-ready applications faster. It combines the best tools in the React ecosystem:
 
-- 🏗️ **Next.js 14** - The React framework for production
+- 🏗️ **Next.js 15.1.4** - The React framework for production
 - 🔄 **Convex** - Real-time database with automatic sync
 - 🔐 **Clerk** - Authentication and user management
 - 🎨 **Tailwind CSS** - Utility-first CSS framework
