@@ -2,9 +2,15 @@
 
 A modern, production-ready starter template for building full-stack applications with Next.js, Convex, and Clerk. Features real-time updates, authentication, dark mode, and best practices out of the box.
 
+<div align="center">
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FVidAIze%2Fnext-stack-template)
 [![GitHub](https://img.shields.io/github/license/VidAIze/next-stack-template)](https://github.com/VidAIze/next-stack-template/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/VidAIze/next-stack-template)](https://github.com/VidAIze/next-stack-template/stargazers)
+
+📦 [View on GitHub](https://github.com/VidAIze/next-stack-template) · 🔄 `git clone https://github.com/VidAIze/next-stack-template.git`
+
+</div>
 
 ## Overview
 
