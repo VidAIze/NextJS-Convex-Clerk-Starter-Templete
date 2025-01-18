@@ -2,9 +2,9 @@
 .git
 .github
 .vscode
-.idea
+node_modules
+packages/
 *.log
-*.swp
 .DS_Store
 .env
 .env.*
@@ -13,36 +13,31 @@
 # Build
 .next
 out
-dist
 build
+dist
 coverage
 
 # Dependencies
-node_modules
-.pnp
-.pnp.js
+pnpm-debug.log*
+.pnpm-store
 
 # Testing
-coverage
-.nyc_output
-*.test.ts
-*.test.tsx
 __tests__
 test
+tests
+*.test.*
+*.spec.*
 
 # Misc
-.gitignore
-.npmrc
-.prettierrc
-.eslintrc
-.eslintignore
 .editorconfig
-*.md
-!README.md
-!LICENSE
+.eslintignore
+.prettierignore
+*.config.js
+*.config.ts
+tsconfig.json
 
 # Development configs
-tsconfig.json
-postcss.config.js
-tailwind.config.js
-next.config.js 
+.eslintrc*
+.prettierrc*
+.babelrc*
+jest.config.* 

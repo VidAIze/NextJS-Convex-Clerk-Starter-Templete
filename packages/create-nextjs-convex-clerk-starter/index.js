@@ -11,8 +11,31 @@ import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function detectPackageManager() {
+  const userAgent = process.env.npm_config_user_agent;
+  if (userAgent) {
+    if (userAgent.startsWith('pnpm')) return 'pnpm';
+    if (userAgent.startsWith('yarn')) return 'yarn';
+    if (userAgent.startsWith('npm')) return 'npm';
+  }
+  
+  // Default to pnpm if we can't detect
+  try {
+    execSync('pnpm --version', { stdio: 'ignore' });
+    return 'pnpm';
+  } catch {
+    try {
+      execSync('yarn --version', { stdio: 'ignore' });
+      return 'yarn';
+    } catch {
+      return 'npm';
+    }
+  }
+}
+
 async function init() {
   let projectPath = '';
+  const packageManager = detectPackageManager();
 
   program
     .name('create-next-stack')
@@ -57,8 +80,9 @@ async function init() {
       stdio: 'inherit',
     });
 
-    // Remove .git folder
+    // Remove .git folder and packages directory
     fs.removeSync(path.join(root, '.git'));
+    fs.removeSync(path.join(root, 'packages'));
 
     // Initialize new git repository
     execSync('git init', { cwd: root, stdio: 'inherit' });
@@ -71,21 +95,41 @@ async function init() {
     await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
 
     console.log();
+    console.log(chalk.cyan('Installing dependencies...'));
+    try {
+      const installCommand = packageManager === 'yarn' ? 'yarn' : `${packageManager} install`;
+      execSync(installCommand, { 
+        cwd: root, 
+        stdio: 'inherit',
+        env: { ...process.env, ADBLOCK: '1', DISABLE_OPENCOLLECTIVE: '1' } // Disable ads
+      });
+      console.log(chalk.green('✔'), 'Dependencies installed successfully!');
+    } catch (error) {
+      console.log();
+      console.log(chalk.yellow('Warning:'), 'Could not automatically install dependencies.');
+      console.log('Please install them manually by running:');
+      console.log();
+      console.log(chalk.cyan('  cd'), projectPath);
+      console.log(chalk.cyan(`  ${packageManager}${packageManager === 'yarn' ? '' : ' install'}`));
+      console.log();
+    }
+
+    console.log();
     console.log(chalk.green('Success!'), 'Created', chalk.cyan(appName), 'at', chalk.cyan(root));
     console.log();
     console.log('Inside that directory, you can run several commands:');
     console.log();
-    console.log(chalk.cyan('  pnpm install'));
-    console.log('    Installs all dependencies');
-    console.log();
-    console.log(chalk.cyan('  pnpm dev'));
+    const devCommand = packageManager === 'yarn' ? 'yarn dev' : `${packageManager} dev`;
+    console.log(chalk.cyan(`  ${devCommand}`));
     console.log('    Starts the development server');
     console.log();
     console.log('Get started by typing:');
     console.log();
     console.log(chalk.cyan('  cd'), projectPath);
-    console.log(chalk.cyan('  pnpm install'));
-    console.log(chalk.cyan('  pnpm dev'));
+    if (!fs.existsSync(path.join(root, 'node_modules'))) {
+      console.log(chalk.cyan(`  ${packageManager}${packageManager === 'yarn' ? '' : ' install'}`));
+    }
+    console.log(chalk.cyan(`  ${devCommand}`));
     console.log();
     console.log('Enjoy your Next.js + Convex + Clerk app! 🚀');
   } catch (error) {

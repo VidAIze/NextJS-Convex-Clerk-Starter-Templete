@@ -1,6 +1,6 @@
 {
   "name": "@vidaize/create-next-stack",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Create Next.js projects with Convex and Clerk setup",
   "main": "index.js",
   "type": "module",
